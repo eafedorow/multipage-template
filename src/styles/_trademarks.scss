@@ -1,0 +1,78 @@
+.trademarks {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  // .trademarks__title
+  &__title {
+    @extend %titleFont;
+    margin-bottom: 50px;
+
+    &::before {
+      @extend %titleLine;
+    }
+  }
+  // .trademarks__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  // .trademarks__list-item
+  &__list-item {
+    height: 280px;
+    border: 1px solid #EBEBF0;
+    transition: 0.3s;
+    display: flex;
+    padding: 50px 50px 30px 70px;
+
+    &:hover {
+      border: 1px solid $primary;
+    }
+  }
+
+  &__item-info {
+    max-width: 360px;
+  }
+  // .trademarks__item-img
+  &__item-img {
+    margin-right: 70px;
+    &.ag {
+      background-image: url(../img/trademarks/1.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;  
+      width: 140px;
+      height: 120px;
+      &.active {
+        background-image: url(../img/trademarks/1-hover.svg);
+      }
+    }
+
+    &.ap {
+      background-image: url(../img/trademarks/2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;  
+      width: 102px;
+      height: 140px;
+      &.active {
+        background-image: url(../img/trademarks/2-hover.svg);
+      }
+    }
+  }
+  // .trademarks__item-title
+  &__item-title {
+    font-size: 28px;
+    line-height: 160%;
+    color: #292D33;
+    margin-bottom: 10px;
+
+    &.active {
+      color: $primary;
+    }
+  }
+  // .trademarks__item-text
+  &__item-text {
+    font-size: 16px;
+    line-height: 160%;
+    color: #828A99;
+  }
+}

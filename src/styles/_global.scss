@@ -1,0 +1,109 @@
+// Containers
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint1200) {
+    max-width: 1160px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+.container-fluid {
+  max-width: (1920 + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint1200) {
+    max-width: 1160px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+body {
+  font-family: $fontText;
+  color: #292D33;
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  margin: 0;
+  padding: 25px 60px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  color:#fff;
+
+  &-line {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: $primary;
+    position: relative;
+    padding-left: 60px;
+    transition: 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 1px;
+      width: 40px;
+      background: $primary;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      padding-left: 80px;
+
+      &::before {
+        width: 60px;
+      }
+    }
+  }
+  &-primary {
+    background-color: $primary;
+    transition: .3s;
+    &:hover {
+      background-color: $hoverPrimary;
+    }
+  }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

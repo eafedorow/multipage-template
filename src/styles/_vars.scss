@@ -1,0 +1,45 @@
+// Контейнер и брейкпоинты
+@use 'sass:math';
+$containerWidth: 1464;
+$containerPadding: 10;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1200: 1199.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+$burgerBreakpoint: $breakpoint992;
+$burgerColor: 'black';
+$burgerActiveColor: 'white';
+
+// Colors
+$primary: #5C8EE6;
+$hoverPrimary: #3A71D1;
+$secondary: #398bff;
+
+// EXTEND CLASSES 
+%titleFont {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 120%;
+  position: relative;
+  padding-top: 30px;
+}
+
+%titleLine {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $primary;
+  height: 1px;
+  width: 150px;
+}
+
+// FONTS
+$fontText: 'Open Sans', sans-serif;
+$fontTitle: 'BebasNeueRegular', cursive;
+
+
