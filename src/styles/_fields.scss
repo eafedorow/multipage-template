@@ -1,0 +1,202 @@
+.fields {
+  padding: 75px 0;
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+  }
+
+  // .fields__list
+  &__list {
+    display: grid;
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 55px;
+    row-gap: 25px;
+  }
+  // .fields__title
+  &__title {
+    @extend %titleFont;
+    font-size: 44px;
+    margin-bottom: 40px;
+
+    &::before {
+      @extend %titleLine;
+    }
+  }
+  // .fields__list-item
+  &__list-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #292D33;
+    position: relative;
+    padding-left: 48px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &::before {
+      transition: 0.3s ease-in-out;
+      transform: scale(1);
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1.5);
+      }
+    }
+
+
+    &--chemical {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/chemical.svg);
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &--autocosmetic {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/autocosmetic.svg);
+        width: 21px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &--autowash {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/autowash.svg);
+        width: 20px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+   
+    &--wear {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/wear.svg);
+        width: 30px;
+        height: 24px;
+        position: absolute;
+        left: -4px;
+      }
+    }
+
+    &--food {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/food.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &--shoes {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/shoes.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &--paintings {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/paintings.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &--building-material {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/building-material.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &--cosmetic {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/cosmetic.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &--other {
+      &::before {
+        content: '';
+        background-image: url(../img/fields/others.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+    }
+  }
+  // .fields__logos
+  &__logos {
+    max-width: 480px;
+    max-height: 480px;
+  }
+  // .fields__logo-list
+  &__logo-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  // .fields__logo-item
+  &__logo-item {
+    display: inline-block;
+    width: 240px;
+    height: 160px;
+    border: 1px solid #EBEBF0;
+    transition: 0.3s;
+    background-image: url(../img/logos/1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+
+    
+
+    &:hover {
+      background-image: url(../img/logos/1-hover.svg);
+    }
+  }
+  
+}

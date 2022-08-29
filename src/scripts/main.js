@@ -16,5 +16,18 @@ for (let item of items) {
   }
 }
 
+//Hover in trademark section
+const fields = document.querySelectorAll('.fields__logo-item');
+
+for (let item of items) {
+  let logo = item.querySelector('.fields__item-img');
+  item.onmouseenter = function() { 
+    item.classList.add('active');
+  }
+  item.onmouseleave = function() { 
+    item.classList.remove('active');
+  }
+}
+
 
 

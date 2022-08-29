@@ -1,0 +1,38 @@
+.relationship {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  position: relative;
+  // .relationship__inner
+  &__inner {
+    display: flex;
+  }
+  // .relationship__bg-img
+  &__bg-img {
+    margin-right: 120px;
+    margin-left: -220px;
+  }
+  // .relationship__content
+  &__content {
+  }
+  // .relationship__title
+  &__title {
+    @extend %titleFont;
+    margin-bottom: 20px;
+    &::before {
+      @extend %titleLine;
+    }
+  }
+  // .relationship__text
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #828A99;
+    margin-bottom: 30px;
+  }
+  // .relationship__btn
+  &__btn {
+    cursor: pointer;
+  }
+}
+
