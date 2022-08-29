@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,27 +13,31 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
   />
-  <title>Aliance Production</title>
+  <title>Торговые марки</title>
 </head>
 <body>
-  @@include('./html/_about.html')
-  <!-- MAIN PAGE -->
+  @@include('./html/_header-light.html')
+
   <main>
-    @@include('./html/_scheme.html')
-    @@include('./html/_products.html')
-    @@include('./html/_trademarks.html')
-    @@include('./html/_relationship.html')
-      <!-- FIELDS -->
-    @@include('./html/_fields.html')
-    <!-- BLOG -->
-    @@include('./html/_blog.html')
+    <div class="container-fluid">
+      <div class="page-header__wrapper">
+        <div class="container">
+          <h1 class="page-title">Собственные торговые марки</h1>
+          <div class="page-breadcrumbs">
+            <div class="previous-path">
+              <a class="previous-path-page" href="index.html">Главная</a>
+            </div> 
+            <a class="current-page" href="policy.html">Собственные торговые марки</a>
+          </div>
+        </div>
+      </div>
+
+    @@include('./html/_trademarks-headerless.html')
     <!-- CONTACT FORM -->
     @@include('./html/_contact-form.html')
   </main>
-
+    <!-- FOOTER -->
   @@include('./html/_footer.html')
-
-  <script defer src="js/main.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </div>
 </body>
 </html>

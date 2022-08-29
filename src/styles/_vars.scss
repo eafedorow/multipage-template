@@ -27,6 +27,19 @@ $secondary: #398bff;
   line-height: 120%;
   position: relative;
   padding-top: 30px;
+  color: #292D33;
+
+  &--large {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 400;
+    line-height: 120%;
+    position: relative;
+    padding-top: 30px;
+    color: #292D33;
+  }
 }
 
 %titleLine {
@@ -37,6 +50,7 @@ $secondary: #398bff;
   background: $primary;
   height: 1px;
   width: 150px;
+
 }
 
 // FONTS

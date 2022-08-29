@@ -16,18 +16,20 @@ for (let item of items) {
   }
 }
 
-//Hover in trademark section
-const fields = document.querySelectorAll('.fields__logo-item');
+// Swiper
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  autoplay: true,
 
-for (let item of items) {
-  let logo = item.querySelector('.fields__item-img');
-  item.onmouseenter = function() { 
-    item.classList.add('active');
-  }
-  item.onmouseleave = function() { 
-    item.classList.remove('active');
-  }
-}
-
+  // Navigation arrows
+  navigation: {
+    nextEl: '.next-arrow',
+    prevEl: '.prev-arrow',
+  },
+});
 
 

@@ -21,6 +21,65 @@
     max-width: none;
   }
 }
+
+.global-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 50px;
+  // .page-header__wrapper
+  &__wrapper {
+    background: #F0F2F5;
+    padding: 50px 0;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #292D33;
+  margin-bottom: 15px;
+}
+
+.page-title {
+  @extend %titleFont--large;
+  margin-bottom: 20px;
+
+  &::after {
+    @extend %titleLine;
+  }
+}
+.page-breadcrumbs {
+  display: flex;
+  gap: 10px;
+}
+.previous-path {
+}
+.previous-path-page {
+  color: rgba(130, 138, 153, 1);
+  position: relative;
+  padding-right: 25px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: rgba(130, 138, 153, 1);
+    height: 1px;
+    width: 15px;
+  }
+}
+.current-page {
+  color: #292D33;
+}
+
+
 .container-fluid {
   max-width: (1920 + $containerPadding) + px;
   width: 100%;
